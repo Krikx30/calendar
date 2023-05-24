@@ -1,0 +1,1138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="root_pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#keyBoardEvent" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.calendar.Controller">
+    <children>
+        <Pane id="top_pane" prefHeight="154.0" prefWidth="1024.0">
+            <children>
+                <HBox id="top_pane_sub_container" prefHeight="154.0" prefWidth="1024.0">
+                    <children>
+                        <GridPane id="top_stat_grid_pane" prefHeight="150.0" prefWidth="414.0" style="-fx-background-color: adc3d1;">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <Label id="type_days" alignment="CENTER" contentDisplay="CENTER" prefHeight="117.0" prefWidth="250.0" text="Napok" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                    <font>
+                                        <Font size="20.0" />
+                                    </font></Label>
+                                <Label fx:id="type_statistic" alignment="CENTER" contentDisplay="CENTER" prefHeight="85.0" prefWidth="232.0" text="Statisztika" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                    <font>
+                                        <Font size="20.0" />
+                                    </font></Label>
+                            </children>
+                        </GridPane>
+                        <Label fx:id="yearLabel" alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#mouseEvent" onScroll="#mouseEvent" onScrollFinished="#mouseEvent" prefHeight="154.0" prefWidth="200.0" style="-fx-background-color: adc3d1;" text="2023" textAlignment="CENTER" textFill="#000000b6">
+                            <font>
+                                <Font name="Arial" size="50.0" />
+                            </font>
+                        </Label>
+                        <GridPane prefHeight="148.0" prefWidth="414.0" style="-fx-background-color: adc3d1;">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+
+                                <Label fx:id="Jan" onMouseClicked="#mouseEvent" alignment="CENTER" contentDisplay="CENTER" prefHeight="51.0" prefWidth="152.0" text="Január" textFill="#000000b7" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                    <font>
+                                        <Font size="20.0" />
+                                    </font>
+                                </Label>
+                                <Label fx:id="Feb" onMouseClicked="#mouseEvent" alignment="CENTER" contentDisplay="CENTER" prefHeight="52.0" prefWidth="155.0" text="Február" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                    <font>
+                                        <Font size="20.0" />
+                                    </font></Label>
+                                <Label fx:id="Mar" onMouseClicked="#mouseEvent" alignment="CENTER" contentDisplay="CENTER" prefHeight="50.0" prefWidth="167.0" text="Március" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                    <font>
+                                        <Font size="20.0" />
+                                    </font></Label>
+                                <Label fx:id="Apr" onMouseClicked="#mouseEvent" alignment="CENTER" contentDisplay="CENTER" prefHeight="121.0" prefWidth="172.0" text="Április" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                    <font>
+                                        <Font size="20.0" />
+                                    </font></Label>
+
+                                <Label fx:id="Maj" onMouseClicked="#mouseEvent" alignment="CENTER" contentDisplay="CENTER" prefHeight="142.0" prefWidth="154.0" text="Május" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                    <font>
+                                        <Font size="20.0" />
+                                    </font></Label>
+                                <Label fx:id="Jun" onMouseClicked="#mouseEvent" alignment="CENTER" contentDisplay="CENTER" prefHeight="173.0" prefWidth="194.0" text="Június" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                    <font>
+                                        <Font size="20.0" />
+                                    </font></Label>
+                                <Label fx:id="Jul" onMouseClicked="#mouseEvent" alignment="CENTER" contentDisplay="CENTER" prefHeight="130.0" prefWidth="165.0" text="Július" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                    <font>
+                                        <Font size="20.0" />
+                                    </font></Label>
+                                <Label fx:id="Aug" onMouseClicked="#mouseEvent" alignment="CENTER" contentDisplay="CENTER" prefHeight="124.0" prefWidth="254.0" text="Augusztus" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                    <font>
+                                        <Font size="20.0" />
+                                    </font></Label>
+                                <Label fx:id="Sep" onMouseClicked="#mouseEvent" alignment="CENTER" contentDisplay="CENTER" prefHeight="91.0" prefWidth="169.0" text="Szeptember" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                    <font>
+                                        <Font size="20.0" />
+                                    </font></Label>
+                                <Label fx:id="Okt" onMouseClicked="#mouseEvent" alignment="CENTER" contentDisplay="CENTER" prefHeight="152.0" prefWidth="297.0" text="Október" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                    <font>
+                                        <Font size="20.0" />
+                                    </font></Label>
+                                <Label fx:id="Nov" onMouseClicked="#mouseEvent" alignment="CENTER" contentDisplay="CENTER" prefHeight="69.0" prefWidth="151.0" text="November" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                    <font>
+                                        <Font size="20.0" />
+                                    </font></Label>
+                                <Label fx:id="Dec" onMouseClicked="#mouseEvent" alignment="CENTER" contentDisplay="CENTER" prefHeight="116.0" prefWidth="354.0" text="December" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                    <font>
+                                        <Font size="20.0" />
+                                    </font></Label>
+                            </children>
+                        </GridPane>
+                    </children>
+                </HBox>
+            </children>
+        </Pane>
+        <Pane id="content_pane" layoutY="153.0" prefHeight="614.0" prefWidth="1024.0">
+            <children>
+                <GridPane gridLinesVisible="true" layoutY="-1.0" prefHeight="616.0" prefWidth="1024.0" style="-fx-background-color: white; -fx-border-width: 0.1; -fx-border-color: GREY;">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                            <children>
+                                <HBox alignment="CENTER" prefHeight="93.0" prefWidth="128.0">
+                                    <children>
+                                        <Label id="calendar_day_1" alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="73.0" text="1" textFill="#000000b7">
+                                 <font>
+                                    <Font name="Arial" size="40.0" />
+                                 </font></Label>
+                              <Label id="calendar_comment_1" alignment="TOP_CENTER" contentDisplay="CENTER" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" prefHeight="80.0" prefWidth="55.0" text="..." textAlignment="CENTER">
+                                 <font>
+                                    <Font size="40.0" />
+                                 </font>
+                              </Label>
+                                    </children>
+                                </HBox>
+                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                    <children>
+                                        <Label id="calendar_dosage_1" alignment="CENTER" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" prefHeight="84.0" prefWidth="101.0" text="?? mg">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font></Label>
+                                        <Label id="calendar_count_1" alignment="CENTER" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" prefHeight="80.0" prefWidth="102.0" text="??">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font></Label>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </children>
+
+                    <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                            <children>
+                                <HBox alignment="CENTER" prefHeight="93.0" prefWidth="128.0">
+                                    <children>
+                                        <Label id="calendar_day_2" alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="73.0" text="2" textFill="#000000b7">
+                                            <font>
+                                                <Font name="Arial" size="40.0" />
+                                            </font></Label>
+                                        <Label id="calendar_comment_2" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="80.0" prefWidth="55.0" text="..." textAlignment="CENTER">
+                                            <font>
+                                                <Font size="40.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                    <children>
+                                        <Label id="calendar_dosage_2" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="CENTER" prefHeight="84.0" prefWidth="101.0" text="?? mg">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font></Label>
+                                        <Label id="calendar_count_2" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="CENTER" prefHeight="80.0" prefWidth="102.0" text="??">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font></Label>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </children>
+
+                    <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="0">
+                            <children>
+                                <HBox alignment="CENTER" prefHeight="93.0" prefWidth="128.0">
+                                    <children>
+                                        <Label id="calendar_day_3" alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="73.0" text="3" textFill="#000000b7">
+                                            <font>
+                                                <Font name="Arial" size="40.0" />
+                                            </font></Label>
+                                        <Label id="calendar_comment_3" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="80.0" prefWidth="55.0" text="..." textAlignment="CENTER">
+                                            <font>
+                                                <Font size="40.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                    <children>
+                                        <Label id="calendar_dosage_3" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="CENTER" prefHeight="84.0" prefWidth="101.0" text="?? mg">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font></Label>
+                                        <Label id="calendar_count_3" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="CENTER" prefHeight="80.0" prefWidth="102.0" text="??">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font></Label>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </children>
+
+                    <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="3" GridPane.rowIndex="0">
+                            <children>
+                                <HBox alignment="CENTER" prefHeight="93.0" prefWidth="128.0">
+                                    <children>
+                                        <Label id="calendar_day_4" alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="73.0" text="4" textFill="#000000b7">
+                                            <font>
+                                                <Font name="Arial" size="40.0" />
+                                            </font></Label>
+                                        <Label id="calendar_comment_4" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="80.0" prefWidth="55.0" text="..." textAlignment="CENTER">
+                                            <font>
+                                                <Font size="40.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                    <children>
+                                        <Label id="calendar_dosage_4" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="CENTER" prefHeight="84.0" prefWidth="101.0" text="?? mg">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font></Label>
+                                        <Label id="calendar_count_4" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="CENTER" prefHeight="80.0" prefWidth="102.0" text="??">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font></Label>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </children>
+
+                    <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="4" GridPane.rowIndex="0">
+                            <children>
+                                <HBox alignment="CENTER" prefHeight="93.0" prefWidth="128.0">
+                                    <children>
+                                        <Label id="calendar_day_5" alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="73.0" text="5" textFill="#000000b7">
+                                            <font>
+                                                <Font name="Arial" size="40.0" />
+                                            </font></Label>
+                                        <Label id="calendar_comment_5" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="80.0" prefWidth="55.0" text="..." textAlignment="CENTER">
+                                            <font>
+                                                <Font size="40.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                    <children>
+                                        <Label id="calendar_dosage_5" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="CENTER" prefHeight="84.0" prefWidth="101.0" text="?? mg">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font></Label>
+                                        <Label id="calendar_count_5" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="CENTER" prefHeight="80.0" prefWidth="102.0" text="??">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font></Label>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </children>
+
+                    <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="5" GridPane.rowIndex="0">
+                            <children>
+                                <HBox alignment="CENTER" prefHeight="93.0" prefWidth="128.0">
+                                    <children>
+                                        <Label id="calendar_day_6" alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="73.0" text="6" textFill="#000000b7">
+                                            <font>
+                                                <Font name="Arial" size="40.0" />
+                                            </font></Label>
+                                        <Label id="calendar_comment_6" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="80.0" prefWidth="55.0" text="..." textAlignment="CENTER">
+                                            <font>
+                                                <Font size="40.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                    <children>
+                                        <Label id="calendar_dosage_6" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="CENTER" prefHeight="84.0" prefWidth="101.0" text="?? mg">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font></Label>
+                                        <Label id="calendar_count_6" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="CENTER" prefHeight="80.0" prefWidth="102.0" text="??">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font></Label>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </children>
+
+                    <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="6" GridPane.rowIndex="0">
+                            <children>
+                                <HBox alignment="CENTER" prefHeight="93.0" prefWidth="128.0">
+                                    <children>
+                                        <Label id="calendar_day_7" alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="73.0" text="7" textFill="#000000b7">
+                                            <font>
+                                                <Font name="Arial" size="40.0" />
+                                            </font></Label>
+                                        <Label id="calendar_comment_7" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="80.0" prefWidth="55.0" text="..." textAlignment="CENTER">
+                                            <font>
+                                                <Font size="40.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                    <children>
+                                        <Label id="calendar_dosage_7" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="CENTER" prefHeight="84.0" prefWidth="101.0" text="?? mg">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font></Label>
+                                        <Label id="calendar_count_7" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="CENTER" prefHeight="80.0" prefWidth="102.0" text="??">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font></Label>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </children>
+
+                    <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="7" GridPane.rowIndex="0">
+                            <children>
+                                <HBox alignment="CENTER" prefHeight="93.0" prefWidth="128.0">
+                                    <children>
+                                        <Label id="calendar_day_8" alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="73.0" text="8" textFill="#000000b7">
+                                            <font>
+                                                <Font name="Arial" size="40.0" />
+                                            </font></Label>
+                                        <Label id="calendar_comment_8" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="80.0" prefWidth="55.0" text="..." textAlignment="CENTER">
+                                            <font>
+                                                <Font size="40.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                    <children>
+                                        <Label id="calendar_dosage_8" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="CENTER" prefHeight="84.0" prefWidth="101.0" text="?? mg">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font></Label>
+                                        <Label id="calendar_count_8" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="CENTER" prefHeight="80.0" prefWidth="102.0" text="??">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font></Label>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </children>
+
+                    <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                            <children>
+                                <HBox alignment="CENTER" prefHeight="93.0" prefWidth="128.0">
+                                    <children>
+                                        <Label id="calendar_day_9" alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="73.0" text="9" textFill="#000000b7">
+                                            <font>
+                                                <Font name="Arial" size="40.0" />
+                                            </font></Label>
+                                        <Label id="calendar_comment_9" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="80.0" prefWidth="55.0" text="..." textAlignment="CENTER">
+                                            <font>
+                                                <Font size="40.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                    <children>
+                                        <Label id="calendar_dosage_9" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="CENTER" prefHeight="84.0" prefWidth="101.0" text="?? mg">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font></Label>
+                                        <Label id="calendar_count_9" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="CENTER" prefHeight="80.0" prefWidth="102.0" text="??">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font></Label>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </children>
+
+                    <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                            <children>
+                                <HBox alignment="CENTER" prefHeight="93.0" prefWidth="128.0">
+                                    <children>
+                                        <Label id="calendar_day_10" alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="73.0" text="10" textFill="#000000b7">
+                                            <font>
+                                                <Font name="Arial" size="40.0" />
+                                            </font></Label>
+                                        <Label id="calendar_comment_10" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="80.0" prefWidth="55.0" text="..." textAlignment="CENTER">
+                                            <font>
+                                                <Font size="40.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                    <children>
+                                        <Label id="calendar_dosage_10" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="CENTER" prefHeight="84.0" prefWidth="101.0" text="?? mg">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font></Label>
+                                        <Label id="calendar_count_10" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="CENTER" prefHeight="80.0" prefWidth="102.0" text="??">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font></Label>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </children>
+
+                    <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                            <children>
+                                <HBox alignment="CENTER" prefHeight="93.0" prefWidth="128.0">
+                                    <children>
+                                        <Label id="calendar_day_11" alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="73.0" text="11" textFill="#000000b7">
+                                            <font>
+                                                <Font name="Arial" size="40.0" />
+                                            </font></Label>
+                                        <Label id="calendar_comment_11" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="80.0" prefWidth="55.0" text="..." textAlignment="CENTER">
+                                            <font>
+                                                <Font size="40.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                    <children>
+                                        <Label id="calendar_dosage_11" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="CENTER" prefHeight="84.0" prefWidth="101.0" text="?? mg">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font></Label>
+                                        <Label id="calendar_count_11" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="CENTER" prefHeight="80.0" prefWidth="102.0" text="??">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font></Label>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </children>
+
+                    <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                            <children>
+                                <HBox alignment="CENTER" prefHeight="93.0" prefWidth="128.0">
+                                    <children>
+                                        <Label id="calendar_day_12" alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="73.0" text="12" textFill="#000000b7">
+                                            <font>
+                                                <Font name="Arial" size="40.0" />
+                                            </font></Label>
+                                        <Label id="calendar_comment_12" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="80.0" prefWidth="55.0" text="..." textAlignment="CENTER">
+                                            <font>
+                                                <Font size="40.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                    <children>
+                                        <Label id="calendar_dosage_12" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="CENTER" prefHeight="84.0" prefWidth="101.0" text="?? mg">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font></Label>
+                                        <Label id="calendar_count_12" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="CENTER" prefHeight="80.0" prefWidth="102.0" text="??">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font></Label>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </children>
+
+                    <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                            <children>
+                                <HBox alignment="CENTER" prefHeight="93.0" prefWidth="128.0">
+                                    <children>
+                                        <Label id="calendar_day_13" alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="73.0" text="13" textFill="#000000b7">
+                                            <font>
+                                                <Font name="Arial" size="40.0" />
+                                            </font></Label>
+                                        <Label id="calendar_comment_13" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="80.0" prefWidth="55.0" text="..." textAlignment="CENTER">
+                                            <font>
+                                                <Font size="40.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                    <children>
+                                        <Label id="calendar_dosage_13" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="CENTER" prefHeight="84.0" prefWidth="101.0" text="?? mg">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font></Label>
+                                        <Label id="calendar_count_13" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="CENTER" prefHeight="80.0" prefWidth="102.0" text="??">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font></Label>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </children>
+
+                    <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                            <children>
+                                <HBox alignment="CENTER" prefHeight="93.0" prefWidth="128.0">
+                                    <children>
+                                        <Label id="calendar_day_14" alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="73.0" text="14" textFill="#000000b7">
+                                            <font>
+                                                <Font name="Arial" size="40.0" />
+                                            </font></Label>
+                                        <Label id="calendar_comment_14" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="80.0" prefWidth="55.0" text="..." textAlignment="CENTER">
+                                            <font>
+                                                <Font size="40.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                    <children>
+                                        <Label id="calendar_dosage_14" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="CENTER" prefHeight="84.0" prefWidth="101.0" text="?? mg">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font></Label>
+                                        <Label id="calendar_count_14" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="CENTER" prefHeight="80.0" prefWidth="102.0" text="??">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font></Label>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </children>
+
+                    <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="6" GridPane.rowIndex="1">
+                            <children>
+                                <HBox alignment="CENTER" prefHeight="93.0" prefWidth="128.0">
+                                    <children>
+                                        <Label id="calendar_day_15" alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="73.0" text="15" textFill="#000000b7">
+                                            <font>
+                                                <Font name="Arial" size="40.0" />
+                                            </font></Label>
+                                        <Label id="calendar_comment_15" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="80.0" prefWidth="55.0" text="..." textAlignment="CENTER">
+                                            <font>
+                                                <Font size="40.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                    <children>
+                                        <Label id="calendar_dosage_15" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="CENTER" prefHeight="84.0" prefWidth="101.0" text="?? mg">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font></Label>
+                                        <Label id="calendar_count_15" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="CENTER" prefHeight="80.0" prefWidth="102.0" text="??">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font></Label>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </children>
+
+                    <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="7" GridPane.rowIndex="1">
+                            <children>
+                                <HBox alignment="CENTER" prefHeight="93.0" prefWidth="128.0">
+                                    <children>
+                                        <Label id="calendar_day_16" alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="73.0" text="16" textFill="#000000b7">
+                                            <font>
+                                                <Font name="Arial" size="40.0" />
+                                            </font></Label>
+                                        <Label id="calendar_comment_16" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="80.0" prefWidth="55.0" text="..." textAlignment="CENTER">
+                                            <font>
+                                                <Font size="40.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                    <children>
+                                        <Label id="calendar_dosage_16" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="CENTER" prefHeight="84.0" prefWidth="101.0" text="?? mg">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font></Label>
+                                        <Label id="calendar_count_16" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="CENTER" prefHeight="80.0" prefWidth="102.0" text="??">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font></Label>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </children>
+
+                    <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="0" GridPane.rowIndex="2">
+                            <children>
+                                <HBox alignment="CENTER" prefHeight="93.0" prefWidth="128.0">
+                                    <children>
+                                        <Label id="calendar_day_17" alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="73.0" text="17" textFill="#000000b7">
+                                            <font>
+                                                <Font name="Arial" size="40.0" />
+                                            </font></Label>
+                                        <Label id="calendar_comment_17" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="80.0" prefWidth="55.0" text="..." textAlignment="CENTER">
+                                            <font>
+                                                <Font size="40.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                    <children>
+                                        <Label id="calendar_dosage_17" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="CENTER" prefHeight="84.0" prefWidth="101.0" text="?? mg">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font></Label>
+                                        <Label id="calendar_count_17" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="CENTER" prefHeight="80.0" prefWidth="102.0" text="??">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font></Label>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </children>
+
+                    <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                            <children>
+                                <HBox alignment="CENTER" prefHeight="93.0" prefWidth="128.0">
+                                    <children>
+                                        <Label id="calendar_day_18" alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="73.0" text="18" textFill="#000000b7">
+                                            <font>
+                                                <Font name="Arial" size="40.0" />
+                                            </font></Label>
+                                        <Label id="calendar_comment_18" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="80.0" prefWidth="55.0" text="..." textAlignment="CENTER">
+                                            <font>
+                                                <Font size="40.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                    <children>
+                                        <Label id="calendar_dosage_18" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="CENTER" prefHeight="84.0" prefWidth="101.0" text="?? mg">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font></Label>
+                                        <Label id="calendar_count_18" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="CENTER" prefHeight="80.0" prefWidth="102.0" text="??">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font></Label>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </children>
+
+                    <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                            <children>
+                                <HBox alignment="CENTER" prefHeight="93.0" prefWidth="128.0">
+                                    <children>
+                                        <Label id="calendar_day_19" alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="73.0" text="19" textFill="#000000b7">
+                                            <font>
+                                                <Font name="Arial" size="40.0" />
+                                            </font></Label>
+                                        <Label id="calendar_comment_19" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="80.0" prefWidth="55.0" text="..." textAlignment="CENTER">
+                                            <font>
+                                                <Font size="40.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                    <children>
+                                        <Label id="calendar_dosage_19" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="CENTER" prefHeight="84.0" prefWidth="101.0" text="?? mg">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font></Label>
+                                        <Label id="calendar_count_19" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="CENTER" prefHeight="80.0" prefWidth="102.0" text="??">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font></Label>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </children>
+
+                    <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                            <children>
+                                <HBox alignment="CENTER" prefHeight="93.0" prefWidth="128.0">
+                                    <children>
+                                        <Label id="calendar_day_20" alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="73.0" text="20" textFill="#000000b7">
+                                            <font>
+                                                <Font name="Arial" size="40.0" />
+                                            </font></Label>
+                                        <Label id="calendar_comment_20" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="80.0" prefWidth="55.0" text="..." textAlignment="CENTER">
+                                            <font>
+                                                <Font size="40.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                    <children>
+                                        <Label id="calendar_dosage_20" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="CENTER" prefHeight="84.0" prefWidth="101.0" text="?? mg">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font></Label>
+                                        <Label id="calendar_count_20" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="CENTER" prefHeight="80.0" prefWidth="102.0" text="??">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font></Label>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </children>
+
+                    <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                            <children>
+                                <HBox alignment="CENTER" prefHeight="93.0" prefWidth="128.0">
+                                    <children>
+                                        <Label id="calendar_day_21" alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="73.0" text="21" textFill="#000000b7">
+                                            <font>
+                                                <Font name="Arial" size="40.0" />
+                                            </font></Label>
+                                        <Label id="calendar_comment_21" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="80.0" prefWidth="55.0" text="..." textAlignment="CENTER">
+                                            <font>
+                                                <Font size="40.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                    <children>
+                                        <Label id="calendar_dosage_21" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="CENTER" prefHeight="84.0" prefWidth="101.0" text="?? mg">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font></Label>
+                                        <Label id="calendar_count_21" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="CENTER" prefHeight="80.0" prefWidth="102.0" text="??">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font></Label>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </children>
+
+                    <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="5" GridPane.rowIndex="2">
+                            <children>
+                                <HBox alignment="CENTER" prefHeight="93.0" prefWidth="128.0">
+                                    <children>
+                                        <Label id="calendar_day_22" alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="73.0" text="22" textFill="#000000b7">
+                                            <font>
+                                                <Font name="Arial" size="40.0" />
+                                            </font></Label>
+                                        <Label id="calendar_comment_22" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="80.0" prefWidth="55.0" text="..." textAlignment="CENTER">
+                                            <font>
+                                                <Font size="40.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                    <children>
+                                        <Label id="calendar_dosage_22" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="CENTER" prefHeight="84.0" prefWidth="101.0" text="?? mg">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font></Label>
+                                        <Label id="calendar_count_22" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="CENTER" prefHeight="80.0" prefWidth="102.0" text="??">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font></Label>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </children>
+
+                    <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="6" GridPane.rowIndex="2">
+                            <children>
+                                <HBox alignment="CENTER" prefHeight="93.0" prefWidth="128.0">
+                                    <children>
+                                        <Label id="calendar_day_23" alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="73.0" text="23" textFill="#000000b7">
+                                            <font>
+                                                <Font name="Arial" size="40.0" />
+                                            </font></Label>
+                                        <Label id="calendar_comment_23" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="80.0" prefWidth="55.0" text="..." textAlignment="CENTER">
+                                            <font>
+                                                <Font size="40.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                    <children>
+                                        <Label id="calendar_dosage_23" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="CENTER" prefHeight="84.0" prefWidth="101.0" text="?? mg">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font></Label>
+                                        <Label id="calendar_count_23" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="CENTER" prefHeight="80.0" prefWidth="102.0" text="??">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font></Label>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </children>
+
+                    <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="7" GridPane.rowIndex="2">
+                            <children>
+                                <HBox alignment="CENTER" prefHeight="93.0" prefWidth="128.0">
+                                    <children>
+                                        <Label id="calendar_day_24" alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="73.0" text="24" textFill="#000000b7">
+                                            <font>
+                                                <Font name="Arial" size="40.0" />
+                                            </font></Label>
+                                        <Label id="calendar_comment_24" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="80.0" prefWidth="55.0" text="..." textAlignment="CENTER">
+                                            <font>
+                                                <Font size="40.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                    <children>
+                                        <Label id="calendar_dosage_24" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="CENTER" prefHeight="84.0" prefWidth="101.0" text="?? mg">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font></Label>
+                                        <Label id="calendar_count_24" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="CENTER" prefHeight="80.0" prefWidth="102.0" text="??">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font></Label>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </children>
+
+                    <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="0" GridPane.rowIndex="3">
+                            <children>
+                                <HBox alignment="CENTER" prefHeight="93.0" prefWidth="128.0">
+                                    <children>
+                                        <Label id="calendar_day_25" alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="73.0" text="25" textFill="#000000b7">
+                                            <font>
+                                                <Font name="Arial" size="40.0" />
+                                            </font></Label>
+                                        <Label id="calendar_comment_25" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="80.0" prefWidth="55.0" text="..." textAlignment="CENTER">
+                                            <font>
+                                                <Font size="40.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                    <children>
+                                        <Label id="calendar_dosage_25" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="CENTER" prefHeight="84.0" prefWidth="101.0" text="?? mg">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font></Label>
+                                        <Label id="calendar_count_25" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="CENTER" prefHeight="80.0" prefWidth="102.0" text="??">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font></Label>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </children>
+
+                    <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                            <children>
+                                <HBox alignment="CENTER" prefHeight="93.0" prefWidth="128.0">
+                                    <children>
+                                        <Label id="calendar_day_26" alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="73.0" text="26" textFill="#000000b7">
+                                            <font>
+                                                <Font name="Arial" size="40.0" />
+                                            </font></Label>
+                                        <Label id="calendar_comment_26" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="80.0" prefWidth="55.0" text="..." textAlignment="CENTER">
+                                            <font>
+                                                <Font size="40.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                    <children>
+                                        <Label id="calendar_dosage_26" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="CENTER" prefHeight="84.0" prefWidth="101.0" text="?? mg">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font></Label>
+                                        <Label id="calendar_count_26" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="CENTER" prefHeight="80.0" prefWidth="102.0" text="??">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font></Label>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </children>
+
+                    <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                            <children>
+                                <HBox alignment="CENTER" prefHeight="93.0" prefWidth="128.0">
+                                    <children>
+                                        <Label id="calendar_day_27" alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="73.0" text="27" textFill="#000000b7">
+                                            <font>
+                                                <Font name="Arial" size="40.0" />
+                                            </font></Label>
+                                        <Label id="calendar_comment_27" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="80.0" prefWidth="55.0" text="..." textAlignment="CENTER">
+                                            <font>
+                                                <Font size="40.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                    <children>
+                                        <Label id="calendar_dosage_27" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="CENTER" prefHeight="84.0" prefWidth="101.0" text="?? mg">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font></Label>
+                                        <Label id="calendar_count_27" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="CENTER" prefHeight="80.0" prefWidth="102.0" text="??">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font></Label>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </children>
+
+                    <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                            <children>
+                                <HBox alignment="CENTER" prefHeight="93.0" prefWidth="128.0">
+                                    <children>
+                                        <Label id="calendar_day_28" alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="73.0" text="28" textFill="#000000b7">
+                                            <font>
+                                                <Font name="Arial" size="40.0" />
+                                            </font></Label>
+                                        <Label id="calendar_comment_28" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="80.0" prefWidth="55.0" text="..." textAlignment="CENTER">
+                                            <font>
+                                                <Font size="40.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                    <children>
+                                        <Label id="calendar_dosage_28" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="CENTER" prefHeight="84.0" prefWidth="101.0" text="?? mg">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font></Label>
+                                        <Label id="calendar_count_28" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="CENTER" prefHeight="80.0" prefWidth="102.0" text="??">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font></Label>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </children>
+
+                    <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="4" GridPane.rowIndex="3">
+                            <children>
+                                <HBox alignment="CENTER" prefHeight="93.0" prefWidth="128.0">
+                                    <children>
+                                        <Label id="calendar_day_29" alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="73.0" text="29" textFill="#000000b7">
+                                            <font>
+                                                <Font name="Arial" size="40.0" />
+                                            </font></Label>
+                                        <Label id="calendar_comment_29" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="80.0" prefWidth="55.0" text="..." textAlignment="CENTER">
+                                            <font>
+                                                <Font size="40.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                    <children>
+                                        <Label id="calendar_dosage_29" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="CENTER" prefHeight="84.0" prefWidth="101.0" text="?? mg">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font></Label>
+                                        <Label id="calendar_count_29" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="CENTER" prefHeight="80.0" prefWidth="102.0" text="??">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font></Label>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </children>
+
+                    <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="5" GridPane.rowIndex="3">
+                            <children>
+                                <HBox alignment="CENTER" prefHeight="93.0" prefWidth="128.0">
+                                    <children>
+                                        <Label id="calendar_day_30" alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="73.0" text="30" textFill="#000000b7">
+                                            <font>
+                                                <Font name="Arial" size="40.0" />
+                                            </font></Label>
+                                        <Label id="calendar_comment_30" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="80.0" prefWidth="55.0" text="..." textAlignment="CENTER">
+                                            <font>
+                                                <Font size="40.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                    <children>
+                                        <Label id="calendar_dosage_30" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="CENTER" prefHeight="84.0" prefWidth="101.0" text="?? mg">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font></Label>
+                                        <Label id="calendar_count_30" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="CENTER" prefHeight="80.0" prefWidth="102.0" text="??">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font></Label>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </children>
+
+                    <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="6" GridPane.rowIndex="3">
+                            <children>
+                                <HBox alignment="CENTER" prefHeight="93.0" prefWidth="128.0">
+                                    <children>
+                                        <Label id="calendar_day_31" alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="73.0" text="31" textFill="#000000b7">
+                                            <font>
+                                                <Font name="Arial" size="40.0" />
+                                            </font></Label>
+                                        <Label id="calendar_comment_31" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="80.0" prefWidth="55.0" text="..." textAlignment="CENTER">
+                                            <font>
+                                                <Font size="40.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                    <children>
+                                        <Label id="calendar_dosage_31" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="CENTER" prefHeight="84.0" prefWidth="101.0" text="?? mg">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font></Label>
+                                        <Label id="calendar_count_31" onScroll="#mouseEvent" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" alignment="CENTER" prefHeight="80.0" prefWidth="102.0" text="??">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font></Label>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </children>
+
+                    <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="7" GridPane.rowIndex="3">
+                            <children>
+                                <Label id="calendar_save" onMouseEntered="#mouseEvent" onMouseExited="#mouseEvent" onMouseClicked="#mouseEvent" alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="73.0" text="Mentés" textFill="#000000b7"/>
+                            </children>
+                        </VBox>
+                    </children>
+
+
+                </GridPane>
+            </children></Pane>
+    </children>
+</AnchorPane>
